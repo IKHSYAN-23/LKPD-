@@ -10,12 +10,21 @@
 <body>
     <script>
         let detik=22;
-        let menit;
-        let jam;
+        let menit=59;
+        let jam= 5;
 
         if(detik +1 ==60){
             detik = 0;
 
+            if(menit==60){
+                menit = 0;
+            }
+            
+            if (jam == 24){
+                jam = 0;
+                menit = 0;
+                detik =0;
+            }
         }else{
             detik++;
         }

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //  Nilai Rata Rata_25_1_24
+        let PABP = 70
+        let MTK = 82
+        let DPK = 77
+        let mean = (PABP + MTK + DPK) / 3
+        console.log(mean)
+
+        if (mean >= 80&& mean==100 ) {
+            grade = "A"
+        } else if (mean >=75&& mean<79) { 
+            grade = "B"
+        } else if (mean >=65&& mean<74) {
+            grade = "C"
+        } else if (mean >= 45&& mean<64) {
+            grade = "D"
+        } else if (mean <= 0 && mean<44 ) {
+            grade = "E"
+        } else {
+            grade = "K"
+        }
+
+        console.log(grade)
+    </script>
+</body>
+</html>

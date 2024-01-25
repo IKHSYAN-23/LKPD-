@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=s, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let code =12345678910;
+        let  g;
+        let dd;
+        let mm;
+        let yyy;
+        let nn;
+
+        g= Math.floor(code/100000000);
+        dd= Math.floor((code/100000000)%100);
+        mm= Math.floor((code/1000000)%100);
+        yyy= Math.floor((code/100)%10000);
+        nn= Math.floor(code/100);
+       
+        switch(mm){
+            case 1:
+                console.log('januari')
+                break;
+            case 2:
+                console.log('Febuari')
+                break;
+            case 3:
+                console.log('Maret')
+                break;
+            case 4:
+                console.log('April')
+                break;
+            case 5:
+                console.log('Mei')
+                break;
+            case 6:
+                console.log('Juni')
+                break;
+            case 7:
+                console.log('Juli')
+                break;
+            case 8:
+                console.log('Agustus')
+                break;
+            case 9:
+                console.log('September')
+                break;
+            case 10:
+                console.log('Oktober')
+                break;
+            case 11:
+                console.log('November')
+                break;
+            case 12:
+                console.log('Desember')
+                default:
+                console.log('Tidak Valid')
+                break;
+        } 
+         
+        console.log(g)
+        console.log(dd)
+        console.log(mm)
+        console.log(yyy)
+        console.log(nn)
+        
+        </script>
+</body>
+</html>

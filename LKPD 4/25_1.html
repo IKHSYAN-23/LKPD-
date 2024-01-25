@@ -3,11 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Nilai Rata Rata_25_1_24</title>
 </head>
 <body>
     <script>
-        
+
+           //  Nilai Rata Rata_25_1_24
+        // let PABP = 70
+        // let MTK = 82
+        // let DPK = 77
+        // let mean = (PABP + MTK + DPK) / 3
+        // console.log(mean)
+
+        // if (mean > 80) {
+        //     grade = "A"
+        // } else if (mean > 79) { 
+        //     grade = "B"
+        // } else if (mean > 74) {
+        //     grade = "C"
+        // } else if (mean > 64) {
+        //     grade = "D"
+        // } else if (mean < 44 ) {
+        //     grade = "E"
+        // } else {
+        //     grade = "K"
+        // }
+
+        // console.log(grade)
+          
+         //--------------------------------------------------------//
+
+
+         function getNamaBulan(bulan) {
+    return ["JAN", "FEB", "MAR", "APR", "MEI", "JUN", "JUL", "AGU", "SEP", "OKT", "NOV", "DES"][bulan - 1];
+}
+
+
+// Fungsi untuk membuat kode pegawai
+function generateKodePegawai(golongan, tanggalLahir, kodeIdentitas) {
+    const dd = String(tanggalLahir.getDate(25)).padStart(2, '0');
+    const mm = getNamaBulan(tanggalLahir.getMonth() + 5); // Bulan dimulai dari 0
+    const yyyy = tanggalLahir.getFullYear(1975);
+    return `${golongan}-${dd}-${mm}-${yyyy}-${kodeIdentitas}`;
+}
+
+//Contoh penggunaan
+const golongan = "2";
+const tanggalLahir = new Date(); // Bulan dimulai dari 01990, 4, 15
+const kodeIdentitas = "3";
+
+
+
+   // Versi Kedua
+// const kodePegawai = generateKodePegawai(golongan, tanggalLahir, kodeIdentitas);
+// console.log(`Kode Pegawai: ${kodePegawai}`);
+
+// function generateEmployeeId(birthDate, groupNumber, employeeId) {
+//             const months = ["JAN", "FEB", "MAR", "APR", "MEI", "JUN", "JUL", "AUG", "SEP", "OKT", "NOV", "DES"];
+//             const day = birthDate.getDate();
+//             const month = months[birthDate.getMonth()];
+//             const year = birthDate.getFullYear();
+
+//             const formattedBirthDate = `${day}${month}${year}`;
+
+//             const formattedEmployeeId = `${groupNumber}${formattedBirthDate}${employeeId}`;
+
+//             return formattedEmployeeId;
+//         }
+
+//         // Example usage:
+//         const birthDate = new Date("2000-05-10");
+//         const groupNumber = 3;
+//         const employeeId = 12;
+
+//         const employeeIdResult = generateEmployeeId(birthDate, groupNumber, employeeId);
+//         console.log(employeeIdResult); // Output: 310MEI200012
+
+ 
     </script>
 </body>
 </html>
+

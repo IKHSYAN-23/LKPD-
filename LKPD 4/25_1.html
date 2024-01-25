@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nilai Rata Rata_25_1_24</title>
 </head>
+
 <body>
     <script>
 
-           //  Nilai Rata Rata_25_1_24
+        //  Nilai Rata Rata_25_1_24
         // let PABP = 70
         // let MTK = 82
         // let DPK = 77
@@ -30,57 +32,64 @@
         // }
 
         // console.log(grade)
-          
-         //--------------------------------------------------------//
+
+        //--------------------------------------------------------//
 
 
-         function getNamaBulan(bulan) {
-    return ["JAN", "FEB", "MAR", "APR", "MEI", "JUN", "JUL", "AGU", "SEP", "OKT", "NOV", "DES"][bulan - 1];
-}
+        //          function getNamaBulan(bulan) {
+        //     return ["JAN", "FEB", "MAR", "APR", "MEI", "JUN", "JUL", "AGU", "SEP", "OKT", "NOV", "DES"][bulan - 1];
+        // }
 
 
-// Fungsi untuk membuat kode pegawai
-function generateKodePegawai(golongan, tanggalLahir, kodeIdentitas) {
-    const dd = String(tanggalLahir.getDate(25)).padStart(2, '0');
-    const mm = getNamaBulan(tanggalLahir.getMonth() + 5); // Bulan dimulai dari 0
-    const yyyy = tanggalLahir.getFullYear(1975);
-    return `${golongan}-${dd}-${mm}-${yyyy}-${kodeIdentitas}`;
-}
+        // // Fungsi untuk membuat kode pegawai
+        // function generateKodePegawai(golongan, tanggalLahir, kodeIdentitas) {
+        //     const dd = String(tanggalLahir.getDate(25)).padStart(2, '0');
+        //     const mm = getNamaBulan(tanggalLahir.getMonth() + 5); // Bulan dimulai dari 0
+        //     const yyyy = tanggalLahir.getFullYear(1975);
+        //     return `${golongan}-${dd}-${mm}-${yyyy}-${kodeIdentitas}`;
+        // }
 
-//Contoh penggunaan
-const golongan = "2";
-const tanggalLahir = new Date(); // Bulan dimulai dari 01990, 4, 15
-const kodeIdentitas = "3";
+        // //Contoh penggunaan
+        // const golongan = "2";
+        // const tanggalLahir = new Date(); // Bulan dimulai dari 01990, 4, 15
+        // const kodeIdentitas = "3";
+
+        // const kodePegawai = generateKodePegawai(golongan, tanggalLahir, kodeIdentitas);
+        // console.log(`Kode Pegawai: ${kodePegawai}`);
+        //sample
+        // function generateEmployeeId(birthDate, groupNumber, employeeId) {
+        //             const months = ["JAN", "FEB", "MAR", "APR", "MEI", "JUN", "JUL", "AUG", "SEP", "OKT", "NOV", "DES"];
+        //             const day = birthDate.getDate();
+        //             const month = months[birthDate.getMonth()];
+        //             const year = birthDate.getFullYear();
+
+        //             const formattedBirthDate = `${day}${month}${year}`;
+
+        //             const formattedEmployeeId = `${groupNumber}${formattedBirthDate}${employeeId}`;
+
+        //             return formattedEmployeeId;
+        //         }
+
+        //         // Example usage:
+        //         const birthDate = new Date("2000-05-10");
+        //         const groupNumber = 3;
+        //         const employeeId = 12;
+
+        //         const employeeIdResult = generateEmployeeId(birthDate, groupNumber, employeeId);
+        //         console.log(employeeIdResult); // Output: 310MEI200012
+
+        //--------------------------------------------------------//
 
 
+        const times = ["02:13:23", "02:13:59", "02:59:59" , "23:59:59"]; // replace with the actual times
+        const newTimes = times.map(time => {
+            const [hh, mm, ss] = time.split(":").map(Number);
+            const newTime = new Date(2022, 0, 1, hh, mm, ss + 1);
+            return newTime.toTimeString().slice(0, 8);
+        });
+        console.log(newTimes);
 
-   // Versi Kedua
-// const kodePegawai = generateKodePegawai(golongan, tanggalLahir, kodeIdentitas);
-// console.log(`Kode Pegawai: ${kodePegawai}`);
-
-// function generateEmployeeId(birthDate, groupNumber, employeeId) {
-//             const months = ["JAN", "FEB", "MAR", "APR", "MEI", "JUN", "JUL", "AUG", "SEP", "OKT", "NOV", "DES"];
-//             const day = birthDate.getDate();
-//             const month = months[birthDate.getMonth()];
-//             const year = birthDate.getFullYear();
-
-//             const formattedBirthDate = `${day}${month}${year}`;
-
-//             const formattedEmployeeId = `${groupNumber}${formattedBirthDate}${employeeId}`;
-
-//             return formattedEmployeeId;
-//         }
-
-//         // Example usage:
-//         const birthDate = new Date("2000-05-10");
-//         const groupNumber = 3;
-//         const employeeId = 12;
-
-//         const employeeIdResult = generateEmployeeId(birthDate, groupNumber, employeeId);
-//         console.log(employeeIdResult); // Output: 310MEI200012
-
- 
     </script>
 </body>
-</html>
 
+</html>
